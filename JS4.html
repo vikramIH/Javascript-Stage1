@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Javascript 4</title>
+</head>
+<body>
+<script>
+
+	//Exercise 1
+	console.log('Exercise 1 - Fortune Teller');
+   function tellFortune (X,Y,Z,N) {
+   	var text = 'You will be a '+ X + ' in '+ Y + ' and married to '+ Z + ' with ' + N + ' kids.' ;
+
+   	return text;
+   }
+
+   var first = tellFortune(' Software Developer','Bangalore','Katy Perry',3); 
+   var second = tellFortune('Data Scientist','New York','Selena Gomez',1); 
+   var third = tellFortune('Data Analyst','California','Kristen Stewart',2); 
+
+   console.log(first + '\n' + second + '\n' + third);
+
+  // Exercise 2
+   console.log('\nExercise 2 - Puppy Age calculator');
+   
+   function calculateDogAge(N, rate) {
+       var info = 'Your doggie is ' + N*rate + ' years old in dog years!'
+       return info;
+   }
+
+   var dog1 = calculateDogAge(5,7);
+   var dog2 = calculateDogAge(10,4);
+
+   console.log(dog1 + '\n' + dog2);
+
+   //Exercise 3
+   console.log('\nExercise 3 - The Lifetime Supply Calculator');
+   const maxAge = 80;
+   function calculateSupply(age,amt) {
+   	   var remAge = maxAge - age;
+       var supply = ((remAge*365) + (remAge/4))*amt;
+       var output = 'You will need '+supply+ ' to last you until the ripe old age of '+ maxAge;
+       return output;
+   }
+   
+   console.log(calculateSupply(20,1.5)+'\n');
+   console.log(calculateSupply(30,0.5)+'\n');
+   console.log(calculateSupply(17,1.7)+'\n');
+
+   //Exercise 4
+   console.log('\nExercise 4 - The Geometrizer');
+
+   const PI = 3.14159;
+
+   function calcCircumference(r) {
+     console.log('The circumference is '+ (2*PI*r));
+   }
+   
+   function calcArea(r) {
+   	console.log('The area is '+(PI * Math.pow(r,2)));
+   }
+
+   calcArea(10);
+   calcCircumference(10);
+
+   //Exercise 5
+   console.log('\nExercise 5 - The Temperature Converter');
+   
+    var tempC = 30;
+    var tempF = 98;
+
+   function celsiusToFahrenheit(C) {
+    var F = (C * (9/5)) + 32; 
+    console.log(C + ' C is ' + F +' F');
+   }
+ 
+   function fahrenheitTocelsius(F) {
+    var C = (F - 32) * (5/9);
+    console.log(F + ' F is ' + C +' C');
+   }
+
+   celsiusToFahrenheit(tempC);
+   fahrenheitTocelsius(tempF);
+
+</script>
+</body>
+</html>

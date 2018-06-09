@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript 2</title>
+</head>
+<body>
+
+	<script>
+	// Object using object constructor and prototype	
+       function Pen(brand, model, inkColor) {
+          this.brand = brand;
+          this.model = model;
+          this.inkColor = inkColor;
+       } 
+
+       var Pen1 = new Pen('Reynolds', 'Brite', 'blue');
+       var Pen2 = new Pen('Reynolds', '045', 'black');
+       var Pen3 = new Pen('Cello', 'Technotip', 'red');
+
+       Pen.prototype.method1 = function(){
+                                           console.log('Object created using object constructor and prototype'); 
+                                         }
+       var newPen = new Pen();
+
+       //Pen.method1();
+
+
+
+    // Object using object function
+
+    var Book = new Object();
+
+      Book.title = "Chanakya's Chant";
+      Book.author = 'Ashwin Sanghi';
+
+      Book.method2 = function() {
+        console.log('Object created using object function');
+      }
+
+      Book.method2();
+
+
+
+
+
+    // Object using literal notation
+
+    var movieCharacter = {
+    	Name : 'Steve Rogers',
+    	Role : 'Captain America',
+    	Action : function(){
+                              console.log('Object created using literal notation');
+    	                   }
+
+    	//  movieCharacter.Action();                 
+    }
+
+
+	</script>
+
+</body>
+</html>
